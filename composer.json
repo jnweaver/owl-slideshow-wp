@@ -1,0 +1,16 @@
+{
+  "name"        : "jnweaver/owl-slideshow-wp",
+  "description" : "A Wordpress slideshow plugin using Owl Carousel 2",
+  "authors"     : [
+    {
+      "name"    : "Nick Weaver",
+      "email"   : "jnweaver@wisc.edu",
+      "homepage": "http://umark.wisc.edu",
+      "role"    : "Original author"
+    }
+  ],
+  "type": "wordpress-plugin",
+  "require": {
+    "composer/installers": "~1.0"
+  }
+}
