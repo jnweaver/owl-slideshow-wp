@@ -1,0 +1,44 @@
+.owl-carousel .owl-item img {
+  width: auto;
+  margin: 0 auto;
+}
+.owl-item .wp-caption-text {
+  /*background-color: #000;*/
+  /*color: #fff;*/
+  margin-bottom: 0;
+  padding: .25em 0;
+  line-height: 1.4;
+  text-align: left;
+}
+.owl-title {
+  text-align: center;
+  font-size: 1.4em;
+  margin: 0.5em 0;
+}
+.owl-nav div {
+  position: absolute;
+  top: calc(40% - 2rem);
+  left: -10px;
+}
+.owl-theme .owl-nav .owl-next {
+  position: absolute;
+  top: calc(40% - 2rem);
+  left: inherit;
+  right: -10px;
+}
+.owl-theme .owl-nav [class*=owl-] {
+  text-shadow: 1px 2px 10px rgba(0,0,0, 0.8);
+  opacity: 1;
+  font-size: 3.5rem;
+  color: rgba(255,255,255,0.75);
+  background-color: transparent;
+  transition: all 0.25s ease;
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+  color: #900;
+  background-color: transparent;
+  /*font-size: 5rem;*/
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background-color: #900;
+}
