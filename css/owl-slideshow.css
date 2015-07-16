@@ -15,24 +15,27 @@
   font-size: 1.4em;
   margin: 0.5em 0;
 }
-.owl-nav div {
+.owl-theme .owl-nav > div {
   position: absolute;
-  top: calc(40% - 2rem);
-  left: -10px;
+  top: calc(50% - 18px);
+  left: 10px;
 }
 .owl-theme .owl-nav .owl-next {
   position: absolute;
-  top: calc(40% - 2rem);
   left: inherit;
-  right: -10px;
+  right: 10px;
 }
 .owl-theme .owl-nav [class*=owl-] {
   text-shadow: 1px 2px 10px rgba(0,0,0, 0.8);
   opacity: 1;
-  font-size: 3.5rem;
+  font-size: 36px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
   color: rgba(255,255,255,0.75);
   background-color: transparent;
-  transition: all 0.25s ease;
+  transition: color 0.25s ease, background-color 0.25s ease;
+  display: none;
 }
 .owl-theme .owl-nav [class*=owl-]:hover {
   color: #900;
