@@ -54,6 +54,22 @@ class OwlSlideshow
 
     $out = "";
 
+    if (!empty($atts['owl_options'])) {
+      $json = json_decode($atts['owl_options'],true);
+
+      // filter JSON options that are strings
+      array_walk_recursive($json, function(&$value) {
+        if ( is_string( $value ) ) {
+          $value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+        }
+      });
+
+      // write the JSON object to the footer
+      add_filter('wp_footer', function() use ($json) {
+        echo '<script>window.OwlSlideshow='.json_encode($json).'</script>';
+      });
+    }
+
     if ( ! empty( $atts['ids'] ) ) {
       // 'ids' is explicitly ordered, unless you specify otherwise.
       if ( empty( $atts['orderby'] ) )
@@ -160,5 +176,9 @@ class OwlSlideshow
 
   </script>
   <?php
+  }
+
+  protected function filter_json(&$json) {
+    $json = htmlspecialchars($json, ENT_QUOTES, 'UTF-8');
   }
 }
