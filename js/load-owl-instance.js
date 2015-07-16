@@ -15,7 +15,7 @@
     owl_options
   );
   var owl_width = $(".owl-carousel").width();
-  var max_height = Math.round( owl_width * .67 ); // enforce a 3x2 ratio
+  max_height = Math.round( owl_width * .67 ); // enforce a 3x2 ratio
   $(".owl-carousel .item img").css("max-height", max_height + 0);
 
   // http://stackoverflow.com/a/4541963
@@ -38,8 +38,11 @@
         new_height;
     
     new_top = Math.round( slide_img_height / 2 ) - 17;
+
+    if (new_top < 0) { // the image had not loaded; use max_height instead
+      new_top = Math.round( max_height / 2 ) - 17;
+    }
     slideshow_nav_buttons.css("top", new_top + "px");
-    //...
   }
 
   // run on page load
