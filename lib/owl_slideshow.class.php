@@ -14,21 +14,8 @@ class OwlSlideshow
     add_action('print_media_templates', array( $this, 'extend_gallery_settings' ));
     add_action('wp_enqueue_scripts', array( $this, 'owl_js' ));
     add_action('admin_head', array( $this, 'admin_css' ));
-    // remove_shortcode('gallery', 'gallery_shortcode');
-    // add_shortcode('gallery', array( &$this, 'owl_html'));
     add_filter( 'post_gallery', array( $this, 'owl_html'),10,2 );
   }
-
-  /**
-   * Init our Wordpress stuff
-   */
-  // public function init() {
-  //   add_action('wp_enqueue_scripts', array( &$this, 'owl_js'));
-  //   remove_shortcode('gallery', 'gallery_shortcode');
-  //   add_shortcode('gallery', array( &$this, 'owl_html'));
-
-  //   // add_shortcode( 'uwmadison_events', array( &$this, 'shortCode') );
-  // }
 
   /**
    * Enqueue Owl assets
@@ -124,7 +111,7 @@ class OwlSlideshow
   ?>
   <script type="text/html" id="tmpl-extend-gallery-settings">
     <label class="setting">
-      <span><?php _e('Output as slideshow?'); ?></span>
+      <span><?php _e('Output as Owl slideshow?'); ?></span>
       <input id="output_as_slideshow" type="checkbox" data-setting="output_as_slideshow" value="1">
     </label>
     <label class="setting" id="label_slideshow_title">
