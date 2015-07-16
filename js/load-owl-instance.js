@@ -10,10 +10,13 @@
       '<i class="next-slide fa fa-chevron-right"></i>'
     ]
   }
+  
   var owl_options = $.extend( default_options, window.OwlSlideshow );
-  $(".owl-carousel").owlCarousel(
+  
+  var owl = $(".owl-carousel").owlCarousel(
     owl_options
   );
+  
   var owl_width = $(".owl-carousel").width();
   max_height = Math.round( owl_width * .67 ); // enforce a 3x2 ratio
   $(".owl-carousel .item img").css("max-height", max_height + 0);
@@ -51,6 +54,17 @@
   // run on window resize
   $(window).resize(function () {
     waitForFinalEvent(reposition_nav_buttons, 500, "Reset slideshow nav buttons");
+  });
+
+  $(document).keyup(function (e) { 
+    e = e || window.event;
+    var keyCode = e.keyCode || e.which;
+    if (e.which == 37 && $('.owl-theme .owl-nav .owl-prev')) {
+      owl.trigger('prev.owl.carousel');
+    }
+    if(e.which == 39 && $('.owl-theme .owl-nav .owl-next')) {
+      owl.trigger('next.owl.carousel');
+    }
   });
 
 })(jQuery);
