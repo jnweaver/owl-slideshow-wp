@@ -28,6 +28,9 @@ You can override the plugin's default Owl 2 optios and/or pass additional option
 
 == Changelog ==
 
+= 0.0.6 =
+* Add image size option to gallery settings and shortcode
+
 = 0.0.3 =
 * Use *large* image size as a default
 
