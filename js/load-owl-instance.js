@@ -17,10 +17,6 @@
     owl_options
   );
   
-  var owl_width = $(".owl-carousel").width();
-  max_height = Math.round( owl_width * .67 ); // enforce a 3x2 ratio
-  $(".owl-carousel .item img").css("max-height", max_height + 0);
-
   // http://stackoverflow.com/a/4541963
   var waitForFinalEvent = (function () {
     var timers = {};
@@ -37,12 +33,12 @@
 
   var reposition_nav_buttons = function(){
     var slideshow_nav_buttons = $(".owl-nav div"),
-        slide_img_height = $(".owl-carousel .item img").height(),
-        new_height;
-    
-    new_top = Math.round( slide_img_height / 2 ) - 17;
+        slide_img_height = $(".owl-carousel .owl-item.active img").height(),
+        new_top = Math.round( slide_img_height / 2 ) - 17,
+        owl_width = $(".owl-carousel").width();
 
-    if (new_top < 0) { // the image had not loaded; use max_height instead
+    if (new_top < 0) { // the image has not loaded
+      var max_height = Math.round( owl_width * .67 ); // enforce a 3x2 ratio;
       new_top = Math.round( max_height / 2 ) - 17;
     }
     slideshow_nav_buttons.css("top", new_top + "px");
