@@ -4,11 +4,7 @@
     dots: true,
     nav: true,
     loop: true,
-    singleItem : true,
-    navText: [
-      '<i class="owl2-prev-slide"><span class="owl2-slideshow-sr-only">Previous</span></i>',
-      '<i class="owl2-next-slide"><span class="owl2-slideshow-sr-only">Next</span></i>'
-    ]
+    singleItem : true
   }
   
   var owl_options = $.extend( default_options, window.OwlSlideshow );

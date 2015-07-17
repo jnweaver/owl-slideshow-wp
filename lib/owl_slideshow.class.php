@@ -28,7 +28,7 @@ class OwlSlideshow
     wp_enqueue_style( 'owl.carousel.min.css', plugins_url('/css/owl.carousel.min.css', dirname(__FILE__) ), '2.0.0-beta.3');
     wp_enqueue_style( 'owl.theme.default.min.css', plugins_url('/css/owl.theme.default.min.css', dirname(__FILE__) ), '2.0.0-beta.3');
     wp_enqueue_style( 'owl-slideshow.css', plugins_url('/css/owl-slideshow.css', dirname(__FILE__) ), '0.0.1');
-    wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' );
+    // wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css' );
   }
 
   public function admin_css() {
@@ -63,12 +63,20 @@ class OwlSlideshow
           $value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
         }
       });
+    } 
 
-      // write the JSON object to the footer
-      add_filter('wp_footer', function() use ($json) {
-        echo '<script>window.OwlSlideshow='.json_encode($json).'</script>';
-      });
-    }
+    // append navText option and apply filters on it
+    $navTextDefault = array('<i class="owl2-prev-slide"><span class="owl2-slideshow-sr-only">Previous</span></i>',
+      '<i class="owl2-next-slide"><span class="owl2-slideshow-sr-only">Next</span></i>');
+    $json['navText'] = apply_filters( 'owl_slideshow_nav_text', $navTextDefault );
+
+    // allow users to filter all Owl options at this point
+    $json = apply_filters( 'owl_json_options', $json );
+
+    // write the JSON object to the footer
+    add_filter('wp_footer', function() use ($json) {
+      echo '<script>window.OwlSlideshow='.json_encode($json).'</script>';
+    });
 
     if ( ! empty( $atts['ids'] ) ) {
       // 'ids' is explicitly ordered, unless you specify otherwise.
