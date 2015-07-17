@@ -33,6 +33,7 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks('grunt-version');
   grunt.loadNpmTasks( 'grunt-wp-readme-to-markdown' );
   grunt.registerTask( 'readme', ['wp_readme_to_markdown']);
+  grunt.registerTask( 'release', ['version','wp_readme_to_markdown']);
 
   grunt.util.linefeed = '\n';
 
