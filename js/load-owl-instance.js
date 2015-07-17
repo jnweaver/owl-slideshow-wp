@@ -51,10 +51,10 @@
   $(document).keyup(function (e) { 
     e = e || window.event;
     var keyCode = e.keyCode || e.which;
-    if (e.which == 37 && $('.owl-theme .owl-nav .owl-prev')) {
+    if (e.which == 37 && $('.owl-theme .owl-nav .owl-prev').length) {
       owl.trigger('prev.owl.carousel');
     }
-    if(e.which == 39 && $('.owl-theme .owl-nav .owl-next')) {
+    if(e.which == 39 && $('.owl-theme .owl-nav .owl-next').length) {
       owl.trigger('next.owl.carousel');
     }
   });
