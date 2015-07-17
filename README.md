@@ -26,7 +26,7 @@ You can override the plugin's default Owl 2 optios and/or pass additional option
 **[gallery output_as_slideshow="true" owl_slideshow_title="A slideshow title" ids="116,119,118,117,114,174" owl_options='{"startPosition":** 2, "nav": false}']  
 ```
 
-*Or use filters instead*
+**Or use filters instead**
 
 You can override the *navText* option (because it's impossible to pass HTML and quotes via a shortcode attribute):
 
