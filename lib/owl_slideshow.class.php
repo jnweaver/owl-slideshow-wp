@@ -35,6 +35,7 @@ class OwlSlideshow
     echo '<style>
       #label_slideshow_title, #input_slideshow_title { visibility: hidden; }
       .media-sidebar #label_slideshow_title.setting input[type=text] { float: left; }
+      .owl_slideshow_heading {padding-top: 24px; margin-bottom: 0; clear: both;}
     </style>';
   }
 
@@ -129,6 +130,7 @@ class OwlSlideshow
     $img_sizes = get_intermediate_image_sizes();
   ?>
   <script type="text/html" id="tmpl-extend-gallery-settings">
+    <h4 class="owl_slideshow_heading">Owl Slideshow</h3>
     <label class="setting">
       <span><?php _e('Output as Owl slideshow?'); ?></span>
       <input id="output_as_slideshow" type="checkbox" data-setting="output_as_slideshow" value="1">
