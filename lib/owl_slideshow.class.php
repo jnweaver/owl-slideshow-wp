@@ -10,7 +10,6 @@ class OwlSlideshow
 
   function __construct()
   {
-    add_image_size( 'owl-slide', 900, 600, true );
     add_action('print_media_templates', array( $this, 'extend_gallery_settings' ));
     add_action('wp_enqueue_scripts', array( $this, 'owl_js' ));
     add_action('admin_head', array( $this, 'admin_css' ));
@@ -85,7 +84,7 @@ class OwlSlideshow
       'icontag' => 'dt',
       'captiontag' => 'dd',
       'columns' => 3,
-      'size' => 'owl-slide',
+      'size' => 'large',
       'link' => 'file',
       'owl_slideshow_title' => ''
     ), $atts));
