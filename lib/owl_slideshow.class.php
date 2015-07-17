@@ -74,6 +74,9 @@ class OwlSlideshow
       if ( empty( $atts['orderby'] ) )
         $atts['orderby'] = 'post__in';
       $atts['include'] = $atts['ids'];
+      if (!empty($atts['owl_slideshow_image_size'])) {
+        $atts['size'] = filter_var($atts['owl_slideshow_image_size'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_HIGH);
+      }
     }
  
     extract(shortcode_atts(array(
@@ -123,16 +126,25 @@ class OwlSlideshow
   }
 
   public function extend_gallery_settings(){
+    $img_sizes = get_intermediate_image_sizes();
   ?>
   <script type="text/html" id="tmpl-extend-gallery-settings">
     <label class="setting">
       <span><?php _e('Output as Owl slideshow?'); ?></span>
       <input id="output_as_slideshow" type="checkbox" data-setting="output_as_slideshow" value="1">
     </label>
-    <label class="setting" id="label_slideshow_title">
+    <label class="setting owl_slideshow_option" id="label_slideshow_title">
       <span><?php _e('Slideshow title (optional)'); ?></span>
     </label>
-    <input  id="input_slideshow_title" type="text" value="" data-setting="owl_slideshow_title" style="float: left !important;">
+    <input class="setting" id="input_slideshow_title " type="text" value="" data-setting="owl_slideshow_title" style="float: left !important;">
+    <label class="setting owl_slideshow_option">
+      <span><?php _e('Choose image size'); ?></span>
+      <select data-setting="owl_slideshow_image_size">
+      <?php foreach ($img_sizes as $size) { ?>
+        <option value="<?php echo $size; ?>"><?php echo $size; ?></option>
+      <?php } ?>
+      </select>
+    </label>
   </script>
 
   <script>
@@ -141,18 +153,15 @@ class OwlSlideshow
 
       wp.media.view.Modal.prototype.on('open', function(){
         if (jQuery("#output_as_slideshow").is(':checked')) {
-          jQuery("#label_slideshow_title").css({"visibility":"visible"});
-          jQuery("#input_slideshow_title").css({"visibility":"visible"});
+          jQuery(".owl_slideshow_option").css({"visibility":"visible"});
         }
       });
 
       jQuery("body.wp-admin").on("change", "#output_as_slideshow", function(){
         if (jQuery(this).is(':checked')) {
-          jQuery("#label_slideshow_title").css({"visibility":"visible"});
-          jQuery("#input_slideshow_title").css({"visibility":"visible"});
+          jQuery(".owl_slideshow_option").css({"visibility":"visible"});
         } else {
-          jQuery("#label_slideshow_title").css({"visibility":"hidden"});
-          jQuery("#input_slideshow_title").css({"visibility":"hidden"});
+          jQuery(".owl_slideshow_option").css({"visibility":"hidden"});
         }
       });
 
@@ -160,7 +169,8 @@ class OwlSlideshow
       // gallery settings list
       _.extend(wp.media.gallery.defaults, {
         output_as_slideshow: '',
-        owl_slideshow_title: ''
+        owl_slideshow_title: '',
+        owl_slideshow_image_size: 'large'
       });
 
       // merge default gallery settings template
