@@ -33,7 +33,7 @@ class OwlSlideshow
 
   public function admin_css() {
     echo '<style>
-      #label_slideshow_title, #input_slideshow_title { visibility: hidden; }
+      .owl_slideshow_option { visibility: hidden; }
       .media-sidebar #label_slideshow_title.setting input[type=text] { float: left; }
       .owl_slideshow_heading {padding-top: 24px; margin-bottom: 0; clear: both;}
     </style>';
