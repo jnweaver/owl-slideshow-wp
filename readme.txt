@@ -3,7 +3,7 @@ Contributors: jnweaver
 Tags: carousel, slideshow, owl
 Requires at least: 4.0.0
 Tested up to: 4.2.2
-Stable tag: 0.0.6
+Stable tag: 0.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,6 +49,10 @@ add_filter( 'owl_json_options', 'my_owl_options');
 ```
 
 == Changelog ==
+
+= 0.0.7 =
+* Add filters for Owl's *navText* option and for replacing the default Owl options entirely
+* Better (simpler) CSS and JS defaults
 
 = 0.0.6 =
 * Add image size option to gallery settings and shortcode
