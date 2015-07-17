@@ -106,7 +106,7 @@ class OwlSlideshow
  
     $images = get_posts($args);
 
-    $out .= '<div class="owl-slideshow">';
+    $out .= '<div class="owl-slideshow-wp">';
     if (!empty($owl_slideshow_title)) {
       $out .= '<h2 class="owl-title">' . htmlspecialchars($owl_slideshow_title, ENT_QUOTES, 'UTF-8') . '</h2>';
     }

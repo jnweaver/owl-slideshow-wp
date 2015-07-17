@@ -13,7 +13,7 @@
   
   var owl_options = $.extend( default_options, window.OwlSlideshow );
   
-  var owl = $(".owl-carousel").owlCarousel(
+  var owl = $(".owl-slideshow-wp .owl-carousel").owlCarousel(
     owl_options
   );
   

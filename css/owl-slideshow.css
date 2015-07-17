@@ -3,8 +3,6 @@
   margin: 0 auto;
 }
 .owl-item .wp-caption-text {
-  /*background-color: #000;*/
-  /*color: #fff;*/
   margin-bottom: 0;
   padding: .25em 0;
   line-height: 1.4;
@@ -40,7 +38,6 @@
 .owl-theme .owl-nav [class*=owl-]:hover {
   color: #900;
   background-color: transparent;
-  /*font-size: 5rem;*/
 }
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background-color: #900;
