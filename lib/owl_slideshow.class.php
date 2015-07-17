@@ -136,7 +136,7 @@ class OwlSlideshow
     <label class="setting owl_slideshow_option" id="label_slideshow_title">
       <span><?php _e('Slideshow title (optional)'); ?></span>
     </label>
-    <input class="setting" id="input_slideshow_title " type="text" value="" data-setting="owl_slideshow_title" style="float: left !important;">
+    <input class="setting owl_slideshow_option" id="input_slideshow_title " type="text" value="" data-setting="owl_slideshow_title" style="float: left !important;">
     <label class="setting owl_slideshow_option">
       <span><?php _e('Choose image size'); ?></span>
       <select data-setting="owl_slideshow_image_size">
