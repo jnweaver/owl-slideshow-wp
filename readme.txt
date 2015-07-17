@@ -3,7 +3,7 @@ Contributors: jnweaver
 Tags: carousel, slideshow, owl
 Requires at least: 4.0.0
 Tested up to: 4.2.2
-Stable tag: 0.0.2
+Stable tag: 0.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,9 @@ You can override the plugin's default Owl 2 optios and/or pass additional option
 ```
 
 == Changelog ==
+
+= 0.0.3 =
+* Use *large* image size as a default
 
 = 0.0.2 =
 * Add arrow-key navigation for slideshow
