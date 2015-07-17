@@ -31,21 +31,21 @@ You can override the plugin's default Owl 2 optios and/or pass additional option
 You can override the *navText* option (because it's impossible to pass HTML and quotes via a shortcode attribute):
 
 ```php
-  function my_owl_nav_text( $navText ) {
-    $myNavText = array('<span class="my-class">Previous</span>',
-      '<span class="my-class">Next</span>');
-    return $myNavText;
-  }
-  add_filter( 'owl_slideshow_nav_text', 'my_owl_nav_text', 100 );
+function my_owl_nav_text( $navText ) {
+  $myNavText = array('<span class="my-class">Previous</span>',
+    '<span class="my-class">Next</span>');
+  return $myNavText;
+}
+add_filter( 'owl_slideshow_nav_text', 'my_owl_nav_text', 100 );
 ```
 
 Or you can override the entire Owl options object:
 
 ```php
-  function my_owl_options( $json_options ) {
-    return array('nav' => false, 'dots' => false);
-  }
-  add_filter( 'owl_json_options', 'my_owl_options');
+function my_owl_options( $json_options ) {
+  return array('nav' => false, 'dots' => false);
+}
+add_filter( 'owl_json_options', 'my_owl_options');
 ```
 
 == Changelog ==
