@@ -6,8 +6,8 @@
     loop: true,
     singleItem : true,
     navText: [
-      '<i class="prev-slide fa fa-chevron-left"></i>',
-      '<i class="next-slide fa fa-chevron-right"></i>'
+      '<i class="owl2-prev-slide"><span class="owl2-slideshow-sr-only">Previous</span></i>',
+      '<i class="owl2-next-slide"><span class="owl2-slideshow-sr-only">Next</span></i>'
     ]
   }
   
@@ -32,7 +32,7 @@
   })();
 
   var reposition_nav_buttons = function(){
-    var slideshow_nav_buttons = $(".owl-nav div"),
+    var slideshow_nav_buttons = $(".owl-nav > div"),
         slide_img_height = $(".owl-carousel .owl-item.active img").height(),
         new_top = Math.round( slide_img_height / 2 ) - 17,
         owl_width = $(".owl-carousel").width();

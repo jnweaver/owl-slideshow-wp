@@ -24,8 +24,7 @@
   right: 10px;
 }
 .owl-theme .owl-nav [class*=owl-] {
-  text-shadow: 1px 2px 10px rgba(0,0,0, 0.8);
-  opacity: 1;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   font-size: 36px;
   line-height: 1;
   margin: 0;
@@ -33,12 +32,30 @@
   color: rgba(255,255,255,0.75);
   background-color: transparent;
   transition: color 0.25s ease, background-color 0.25s ease;
-  display: none;
 }
 .owl-theme .owl-nav [class*=owl-]:hover {
   color: #900;
   background-color: transparent;
 }
+.owl-theme .owl-nav [class*=owl-] i {
+  font-style: normal;
+}
+.owl2-prev-slide:before {
+  content: '\25c0';
+}
+.owl2-next-slide:before {
+  content: '\25B6';
+}
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background-color: #900;
+}
+.owl2-slideshow-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
