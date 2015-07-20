@@ -41,7 +41,9 @@
   }
 
   // run on page load
-  reposition_nav_buttons();
+  $(".owl-carousel .owl-item.active img").ready(function(){
+    reposition_nav_buttons();
+  });
 
   // run on window resize
   $(window).resize(function () {
