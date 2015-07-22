@@ -20,7 +20,7 @@ The plugin adds two options to the standard Wordpress Gallery options:
 
 # Owl Options #
 
-You can override the plugin's default Owl 2 optios and/or pass additional options via an *owl_options* attribute inside the shortcode:
+You can override the plugin's default Owl 2 options and/or pass additional options via an *owl_options* attribute inside the shortcode:
 
 ```
 [gallery output_as_slideshow="true" owl_slideshow_title="A slideshow title" ids="116,119,118,117,114,174" owl_options='{"startPosition": 2, "nav": false}']  
