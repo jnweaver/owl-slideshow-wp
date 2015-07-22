@@ -7,15 +7,15 @@
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
-Output an [Owl Carousel 2](http://owlcarousel.owlgraphic.com/) slideshow using Wordpress’s built-in gallery shortcode.
+Output an [Owl Carousel 2](http://owlcarousel.owlgraphic.com/) slideshow using WordPress’s built-in gallery shortcode.
 
 ## Description ##
 
-This Wordpress plugin takes a Wordpress Gallery and adds options to display the gallery shortcode as a slideshow using Owl Carousel 2.
+This WordPress plugin takes a WordPress Gallery and adds options to display the gallery shortcode as a slideshow using Owl Carousel 2.
 
-The plugin adds two options to the standard Wordpress Gallery options:
+The plugin adds two options to the standard WordPress Gallery options:
 
-1. An *Output as Owl slideshow?* checkbox. Check it if you want the gallery to present as an Owl slideshow. (Otherwise, the gallery will appear as a default Wordpress gallery.)
+1. An *Output as Owl slideshow?* checkbox. Check it if you want the gallery to present as an Owl slideshow. (Otherwise, the gallery will appear as a default WordPress gallery.)
 2. An optional slideshow title text input that appears if you check the Owl slideshow checkbox. The title will appear above the slideshow.
 
 # Owl Options #
