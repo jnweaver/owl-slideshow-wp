@@ -13,7 +13,7 @@ Output an [Owl Carousel 2](http://owlcarousel.owlgraphic.com/) slideshow using W
 
 This Wordpress plugin takes a Wordpress Gallery and adds options to display the gallery shortcode as a slideshow using Owl Carousel 2.
 
-The plugin add two options to the standard Wordpress Gallery options:
+The plugin adds two options to the standard Wordpress Gallery options:
 
 1. An *Output as Owl slideshow?* checkbox. Check it if you want the gallery to present as an Owl slideshow. (Otherwise, the gallery will appear as a default Wordpress gallery.)
 2. An optional slideshow title text input that appears if you check the Owl slideshow checkbox. The title will appear above the slideshow.
@@ -23,7 +23,7 @@ The plugin add two options to the standard Wordpress Gallery options:
 You can override the plugin's default Owl 2 optios and/or pass additional options via an *owl_options* attribute inside the shortcode:
 
 ```
-**[gallery output_as_slideshow="true" owl_slideshow_title="A slideshow title" ids="116,119,118,117,114,174" owl_options='{"startPosition":** 2, "nav": false}']  
+[gallery output_as_slideshow="true" owl_slideshow_title="A slideshow title" ids="116,119,118,117,114,174" owl_options='{"startPosition": 2, "nav": false}']  
 ```
 
 **Or use filters instead:**
