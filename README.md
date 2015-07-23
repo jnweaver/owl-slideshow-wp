@@ -18,7 +18,7 @@ The plugin adds two options to the standard WordPress Gallery options:
 1. An *Output as Owl slideshow?* checkbox. Check it if you want the gallery to present as an Owl slideshow. (Otherwise, the gallery will appear as a default WordPress gallery.)
 2. An optional slideshow title text input that appears if you check the Owl slideshow checkbox. The title will appear above the slideshow.
 
-# Owl Options #
+## Owl Options ##
 
 You can override the plugin's default Owl 2 options and/or pass additional options via an *owl_options* attribute inside the shortcode:
 
@@ -46,6 +46,21 @@ function my_owl_options( $json_options ) {
   return array('nav' => false, 'dots' => false);
 }
 add_filter( 'owl_json_options', 'my_owl_options');
+```
+
+## Overriding the default CSS ##
+
+The plugin comes with minimal default styling. To override the default CSS rules, e.g.:
+
+```css
+.owl-theme .owl-nav [class*=owl-]:hover {
+  color: blue;
+  background-color: transparent;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background-color: blue;
+}
 ```
 
 ## Changelog ##
