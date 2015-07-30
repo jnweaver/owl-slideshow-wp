@@ -3,27 +3,27 @@
 **Tags:** carousel, slideshow, owl  
 **Requires at least:** 4.0.0  
 **Tested up to:** 4.2.2  
-**Stable tag:** 0.0.9  
+**Stable tag:** 0.0.10  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
-Output an [Owl Carousel 2](http://owlcarousel.owlgraphic.com/) slideshow using WordPress’s built-in gallery shortcode.
+Output an [Owl Carousel 2](http://owlcarousel.owlgraphic.com/) slideshow using Wordpress’s built-in gallery shortcode.
 
 ## Description ##
 
-This WordPress plugin takes a WordPress Gallery and adds options to display the gallery shortcode as a slideshow using Owl Carousel 2.
+This Wordpress plugin takes a Wordpress Gallery and adds options to display the gallery shortcode as a slideshow using Owl Carousel 2.
 
-The plugin adds two options to the standard WordPress Gallery options:
+The plugin add two options to the standard Wordpress Gallery options:
 
-1. An *Output as Owl slideshow?* checkbox. Check it if you want the gallery to present as an Owl slideshow. (Otherwise, the gallery will appear as a default WordPress gallery.)
+1. An *Output as Owl slideshow?* checkbox. Check it if you want the gallery to present as an Owl slideshow. (Otherwise, the gallery will appear as a default Wordpress gallery.)
 2. An optional slideshow title text input that appears if you check the Owl slideshow checkbox. The title will appear above the slideshow.
 
-## Owl Options ##
+# Owl Options #
 
-You can override the plugin's default Owl 2 options and/or pass additional options via an *owl_options* attribute inside the shortcode:
+You can override the plugin's default Owl 2 optios and/or pass additional options via an *owl_options* attribute inside the shortcode:
 
 ```
-[gallery output_as_slideshow="true" owl_slideshow_title="A slideshow title" ids="116,119,118,117,114,174" owl_options='{"startPosition": 2, "nav": false}']  
+**[gallery output_as_slideshow="true" owl_slideshow_title="A slideshow title" ids="116,119,118,117,114,174" owl_options='{"startPosition":** 2, "nav": false}']  
 ```
 
 **Or use filters instead:**
@@ -46,21 +46,6 @@ function my_owl_options( $json_options ) {
   return array('nav' => false, 'dots' => false);
 }
 add_filter( 'owl_json_options', 'my_owl_options');
-```
-
-## Overriding the default CSS ##
-
-The plugin comes with minimal default styling. To override the default CSS rules, e.g.:
-
-```css
-.owl-theme .owl-nav [class*=owl-]:hover {
-  color: blue;
-  background-color: transparent;
-}
-
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-  background-color: blue;
-}
 ```
 
 ## Changelog ##
