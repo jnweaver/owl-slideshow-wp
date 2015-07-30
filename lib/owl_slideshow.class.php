@@ -24,15 +24,15 @@ class OwlSlideshow
    **/
   public function owl_js() {
     global $post;
+    wp_register_script('owl-slideshow.min.js', plugins_url( '/js/owl-slideshow.min.js', dirname(__FILE__) ), array('jquery'), '0.0.9', true);
+    wp_register_style( 'owl-slideshow.min.css', plugins_url('/css/owl-slideshow.min.css', dirname(__FILE__) ), '0.0.9');
 
     if ( $this->has_gallery($post) ) {
-      wp_register_script('owl-slideshow.min.js', plugins_url( '/js/owl-slideshow.min.js', dirname(__FILE__) ), array('jquery'), '0.0.9', true);
       wp_enqueue_script('owl-slideshow.min.js');
       // wp_enqueue_script('owl.carousel.min.js', plugins_url( '/js/owl.carousel.min.js', dirname(__FILE__) ), array('jquery'), '2.0.0-beta.3', true);
       // wp_enqueue_script('load-owl-instance.js', plugins_url( '/js/load-owl-instance.js', dirname(__FILE__) ), array('owl.carousel.min.js'), '0.0.1', true);
       // wp_enqueue_style( 'owl.carousel.min.css', plugins_url('/css/owl.carousel.min.css', dirname(__FILE__) ), '2.0.0-beta.3');
       // wp_enqueue_style( 'owl.theme.default.min.css', plugins_url('/css/owl.theme.default.min.css', dirname(__FILE__) ), '2.0.0-beta.3');
-      wp_register_style( 'owl-slideshow.min.css', plugins_url('/css/owl-slideshow.min.css', dirname(__FILE__) ), '0.0.9');
       wp_enqueue_style('owl-slideshow.min.css');
     }
   }
