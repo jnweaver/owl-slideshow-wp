@@ -1,11 +1,11 @@
 <?php
 /**
 * @package owl-slideshow
-* @version 0.0.12
+* @version 0.0.13
 */
 /*
 Plugin Name: Owl Slideshow
-Version: 0.0.12
+Version: 0.0.13
 Description: Output an Owl Carousel 2 slideshow using Wordpress’s built-in gallery shortcode.
 Author: Nick Weaver
 */

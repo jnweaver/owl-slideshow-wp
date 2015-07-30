@@ -1,6 +1,6 @@
 {
   "name": "owl-slideshow-wp",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "main": "Gruntfile.js",
   "author": "Nick Weaver",
   "devDependencies": {
