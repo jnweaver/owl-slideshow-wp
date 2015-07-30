@@ -57,7 +57,7 @@ module.exports = function( grunt ) {
           level: 9
         },
         files: {
-          'css/owl-slideshow.css.min.gz': [
+          'css/owl-slideshow.min.css.gz': [
             'css/owl-slideshow.min.css'
           ]
         }
