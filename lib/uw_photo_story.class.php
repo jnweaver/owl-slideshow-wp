@@ -212,10 +212,10 @@ class UwPhotoStory
     wp_register_script('owl-slideshow.min.js', plugins_url( '/js/owl-slideshow.min.js', dirname(__FILE__) ), array('jquery'), '0.0.9', true);
     wp_register_style( 'owl-slideshow.min.css', plugins_url('/css/owl-slideshow.min.css', dirname(__FILE__) ), '0.0.9');
 
-    if ( $this->is_slideshow ) {
+    // if ( $this->is_slideshow ) {
       wp_enqueue_script('owl-slideshow.min.js');
       wp_enqueue_style('owl-slideshow.min.css');
-    }
+    // }
   }
 
   /**
@@ -223,7 +223,7 @@ class UwPhotoStory
    *
    * @return void
    **/
-  protected function admin_css() {
+  public function admin_css() {
     echo '<style>
       .owl_slideshow_option { visibility: hidden; }
       .media-sidebar #label_slideshow_title.setting input[type=text] { float: left; }

@@ -3,9 +3,10 @@
     <h2 class="owl-title">{{ slideshow_title|e }}</h2>
   {% endif %}
   <div class="gallery owl-carousel">
-    {% for image in images %}
+    {% for id in image_ids %}
+      {% set image = TimberImage(id) %}
       <div class="item">
-        <img src="{{ image.src(size) }}" alt="">
+        <img src="{{ image.src('large') }}" alt="">
         {% if image.caption %}
           <p class="wp-caption-text">
             {{ image.caption }}

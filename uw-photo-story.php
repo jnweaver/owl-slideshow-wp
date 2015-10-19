@@ -13,13 +13,17 @@ if (!class_exists('Timber')) {
   die("This plugin requires Timber for Wordpress.");
 } else {
   // append views dir in this plugin to Timber's view locations
-  if (is_array(Timber::$dirname)) {
-    $views = Timber::$dirname;
-  } else {
-    $views = array(Timber::$dirname);
-  }
-  $views[] = plugin_dir_path(__FILE__) . "views";
-  Timber::$dirname = $views;
+  // if (is_array(Timber::$dirname)) {
+  //   $views = Timber::$dirname;
+  // } else {
+  //   $views = array(Timber::$dirname);
+  // }
+  // $views[] = plugin_dir_path(__FILE__) . "views";
+  // Timber::$dirname = $views;
+  error_log("HWWW");
+  Timber::$locations = plugin_dir_path(__FILE__) . "views";
+  error_log(Timber::$locations);
+  error_log(print_r(Timber::$locations, true));
 }
 
 if (!class_exists('UwPhotoStory')) {

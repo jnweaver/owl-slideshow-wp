@@ -7,6 +7,7 @@
       {% set image = TimberImage(id) %}
       <li class="photo text-center">
         <a href="{{ image.src('large') }}" data-medium="{{ image.src('medium') }}" data-size="{{ image.src('large').width ~ 'x' ~ image.src('large').height }}" data-size-medium="{{ image.src('medium').width ~ 'x' ~ image.src('medium').height }}" title="{{ image.caption }}">
+          <img src="{{ image.src('large-square-thumb') }}" alt="{{ image.caption }}">
         </a>
       </li>
     {% endfor %}
