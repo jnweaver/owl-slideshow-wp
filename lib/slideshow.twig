@@ -1,0 +1,18 @@
+<div class="owl-slideshow-wp">
+  {% if slideshow_title %}
+    <h2 class="owl-title">{{ slideshow_title|e }}</h2>
+  {% endif %}
+  <div class="gallery owl-carousel">
+    {% for id in image_ids %}
+      {% set image = TimberImage(id) %}
+      <div class="item">
+        <img src="{{ image.src(size) }}" alt="">
+        {% if image.caption %}
+          <p class="wp-caption-text">
+            {{ image.caption }}
+          </p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

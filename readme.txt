@@ -1,4 +1,4 @@
-=== Owl Slideshow ===
+=== UW Photo Story ===
 Contributors: jnweaver
 Tags: carousel, slideshow, owl
 Requires at least: 4.0.0
