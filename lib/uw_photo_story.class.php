@@ -34,14 +34,14 @@ class UwPhotoStory
    *
    * @return string
    **/
-  public function render( $output = '', $atts ) {
+  public function render( $output = '', $atts = [] ) {
     global $post;
     $this->post = $post;
 
     if ( !empty($atts) ) {
       $this->image_ids = explode(',',$atts['ids']);
       if ( !empty($atts['owl_slideshow_image_size']) ) {
-        $atts['size'] = filter_var($atts['owl_slideshow_image_size'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_HIGH);
+        $atts['size'] = htmlspecialchars($atts['owl_slideshow_image_size']);
       }
     }
     $this->merge_default_atts($atts);
