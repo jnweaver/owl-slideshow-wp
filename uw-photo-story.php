@@ -1,7 +1,7 @@
 <?php
 /**
 * @package uw-photo-story
-* @version 0.0.14
+* @version 0.0.15
 */
 /*
 Plugin Name: UW Photo Story

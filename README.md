@@ -3,7 +3,7 @@
 **Tags:** carousel, slideshow, owl  
 **Requires at least:** 4.0.0  
 **Tested up to:** 4.2.2  
-**Stable tag:** 0.0.14  
+**Stable tag:** 0.0.15
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -49,6 +49,9 @@ add_filter( 'owl_json_options', 'my_owl_options');
 ```
 
 ## Changelog ##
+
+### 0.0.15 ###
+Updates for PHP 8.1
 
 ### 0.0.7 ###
 * Add filters for Owl's *navText* option and for replacing the default Owl options entirely
